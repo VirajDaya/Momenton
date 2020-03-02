@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -81,44 +81,44 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class CompanyHierarchyView {
-<span class="fstat-no" title="function not covered" >  st</span>atic _displayEmployee(depth, employee) {
-<span class="cstat-no" title="statement not covered" >    if (employee &amp;&amp; employee.name) {</span>
-<span class="cstat-no" title="statement not covered" >      console.log('\t'.repeat(depth), employee.name);</span>
+  static _displayEmployee(depth, employee) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (employee &amp;&amp; employee.name) {
+      console.log('\t'.repeat(depth), employee.name);
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (Object.values(employee.subordinates).length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >      for (const subordinate of Object.values(employee.subordinates)) {</span>
-<span class="cstat-no" title="statement not covered" >        CompanyHierarchyView._displayEmployee(depth + 1, subordinate);</span>
+    if (Object.values(employee.subordinates).length &gt; 0) {
+      for (const subordinate of Object.values(employee.subordinates)) {
+        CompanyHierarchyView._displayEmployee(depth + 1, subordinate);
       }
     }
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  st</span>atic displayCompanyHierarchy(employees) {
-    const depth = <span class="cstat-no" title="statement not covered" >0;</span>
+  static displayCompanyHierarchy(employees) {
+    const depth = 0;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    for (const id in employees) {</span>
-<span class="cstat-no" title="statement not covered" >      CompanyHierarchyView._displayEmployee(depth, employees[id]);</span>
+    for (const id in employees) {
+      CompanyHierarchyView._displayEmployee(depth, employees[id]);
     }
   }
 }
@@ -130,7 +130,7 @@ export default CompanyHierarchyView;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Mar 03 2020 06:24:33 GMT+1100 (Australian Eastern Daylight Time)
+                at Tue Mar 03 2020 06:38:41 GMT+1100 (Australian Eastern Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
