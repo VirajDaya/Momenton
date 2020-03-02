@@ -79,7 +79,7 @@ class Company {
     }
 
     for (const id in hierarchy) {
-      if (hierarchy[id].managerId && hierarchy[id].subordinates.length === 0) {
+      if (hierarchy[id].managerId && Object.values(hierarchy[id].subordinates).length === 0) {
         delete hierarchy[id];
       }
     }
